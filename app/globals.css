@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-ink: #07080c;
+  --color-night: #0d0f16;
+  --color-panel: #141722;
+  --color-line: rgb(255 255 255 / 0.08);
+  --color-gold: #f5b82e;
+  --color-gold-soft: #ffd978;
+  --color-azure: #2f5bff;
+  --color-muted: #9aa0b4;
+  --color-cream: #f4efe6;
+
+  --font-sans: var(--font-manrope);
+  --font-display: var(--font-fraunces);
+  --font-poster: var(--font-bebas);
+
+  --animate-marquee: marquee 40s linear infinite;
+  --animate-flicker: flicker 6s ease-in-out infinite;
+}
+
+@keyframes marquee {
+  to { transform: translateX(-50%); }
+}
+@keyframes flicker {
+  0%, 100% { opacity: 1; }
+  47% { opacity: 1; }
+  48% { opacity: 0.6; }
+  49% { opacity: 1; }
+  72% { opacity: 0.85; }
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+body {
+  background: var(--color-ink);
+  color: var(--color-cream);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--color-gold);
+  color: var(--color-ink);
+}
+
+/* grana pellicola */
+.grain::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.18;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.film-strip {
+  background-image: radial-gradient(circle, var(--color-ink) 38%, transparent 40%);
+  background-size: 22px 14px;
+  background-repeat: repeat-x;
+}
+
+.text-balance { text-wrap: balance; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
