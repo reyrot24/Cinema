@@ -7,7 +7,7 @@ export function Footer() {
   return (
     <footer className="relative mt-24 border-t border-line bg-night">
       <div className="film-strip h-3.5 bg-gold/90" />
-      <div className="mx-auto grid max-w-7xl gap-12 px-4 py-16 sm:px-6 md:grid-cols-[1.4fr_1fr_1fr]">
+      <div className="mx-auto grid grid-cols-1 max-w-7xl gap-12 px-4 py-16 sm:px-6 md:grid-cols-[1.4fr_1fr_1fr]">
         <div>
           <div className="flex items-center gap-3">
             <Image src="/images/logo.png" alt="" width={48} height={48} />

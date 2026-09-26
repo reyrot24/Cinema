@@ -52,7 +52,7 @@ export function Hero({ films, weekLabel }: { films: Film[]; weekLabel: string })
       />
       <div className="grain absolute inset-0 -z-10" />
 
-      <div className="mx-auto grid min-h-[100svh] max-w-7xl items-center gap-12 px-4 pb-16 pt-28 sm:px-6 lg:grid-cols-[1.25fr_1fr]">
+      <div className="mx-auto grid grid-cols-1 min-h-[100svh] max-w-7xl items-center gap-12 px-4 pb-16 pt-28 sm:px-6 lg:grid-cols-[1.25fr_1fr]">
         <div>
           <motion.p
             initial={{ opacity: 0, y: 12 }}

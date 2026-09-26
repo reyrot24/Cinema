@@ -32,7 +32,7 @@ export default async function FilmPage({ params }: PageProps<"/film/[slug]">) {
           <Link href="/programmazione" className="inline-flex items-center gap-2 text-sm text-muted hover:text-cream">
             <ArrowLeft className="size-4" /> Programmazione
           </Link>
-          <div className="mt-8 grid items-start gap-12 md:grid-cols-[340px_1fr]">
+          <div className="mt-8 grid grid-cols-1 items-start gap-12 md:grid-cols-[340px_1fr]">
             <Reveal className="mx-auto w-full max-w-xs text-[21px] md:max-w-none">
               <Poster title={film.title} subtitle={film.subtitle} palette={film.palette} badge={film.badge} className="shadow-[0_40px_100px_-20px_rgba(0,0,0,.9)] ring-1 ring-white/10" />
             </Reveal>

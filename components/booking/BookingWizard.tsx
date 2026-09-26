@@ -178,7 +178,7 @@ export function BookingWizard({ films, initialFilm, initialShow }: Props) {
   const free = TOTAL_SEATS - taken.size;
 
   return (
-    <div className="grid items-start gap-8 lg:grid-cols-[1fr_340px]">
+    <div className="grid grid-cols-1 items-start gap-8 lg:grid-cols-[1fr_340px]">
       <div className="min-w-0">
         <Stepper step={step} onJump={(i) => i < step && go(i)} />
 

@@ -16,7 +16,7 @@ export default function ProssimamentePage() {
       <section className="mx-auto max-w-7xl space-y-6 px-4 sm:px-6">
         {upcoming.map((u, i) => (
           <Reveal key={u.slug} delay={i * 0.05}>
-            <article className="group grid overflow-hidden rounded-[2rem] border border-line bg-panel md:grid-cols-[280px_1fr]">
+            <article className="group grid grid-cols-1 overflow-hidden rounded-[2rem] border border-line bg-panel md:grid-cols-[280px_1fr]">
               <div className="text-[18px]">
                 <Poster title={u.title} palette={u.palette} label={u.kind} className="!rounded-none transition duration-700 group-hover:scale-[1.03]" />
               </div>

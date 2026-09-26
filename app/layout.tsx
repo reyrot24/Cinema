@@ -25,7 +25,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="it" className={`${manrope.variable} ${fraunces.variable} ${bebas.variable}`}>
+    <html lang="it" data-scroll-behavior="smooth" className={`${manrope.variable} ${fraunces.variable} ${bebas.variable}`}>
       <body className="min-h-dvh flex flex-col">
         <Navbar />
         <main className="flex-1">{children}</main>

@@ -43,7 +43,7 @@ export default function Home() {
       </section>
 
       <section className="mx-auto max-w-7xl px-4 pt-28 sm:px-6">
-        <div className="grid gap-10 lg:grid-cols-[1.5fr_1fr]">
+        <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1.5fr_1fr]">
           <div>
             <SectionHeading eyebrow="Orari" title="Scegli il giorno, scegli il film.">
               Spettacolo unico per ogni film. Tocca un orario per prenotare il tuo posto in sala.
@@ -132,7 +132,7 @@ export default function Home() {
       </section>
 
       <section className="mx-auto max-w-7xl px-4 pt-28 sm:px-6">
-        <Reveal className="grid items-center gap-8 rounded-[2rem] bg-gradient-to-br from-azure/30 via-panel to-panel p-8 sm:p-12 md:grid-cols-[1fr_auto]">
+        <Reveal className="grid grid-cols-1 items-center gap-8 rounded-[2rem] bg-gradient-to-br from-azure/30 via-panel to-panel p-8 sm:p-12 md:grid-cols-[1fr_auto]">
           <div>
             <p className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.3em] text-gold">
               <MapPin className="size-4" /> {cinema.city}

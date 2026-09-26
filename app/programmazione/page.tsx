@@ -26,7 +26,7 @@ export default function ProgrammazionePage() {
 
       <section className="mx-auto mt-24 max-w-7xl space-y-24 px-4 sm:px-6">
         {films.map((film, i) => (
-          <article key={film.slug} id={film.slug} className="grid scroll-mt-28 items-start gap-10 md:grid-cols-[320px_1fr]">
+          <article key={film.slug} id={film.slug} className="grid grid-cols-1 scroll-mt-28 items-start gap-10 md:grid-cols-[320px_1fr]">
             <Reveal className={`text-[20px] md:sticky md:top-28 ${i % 2 ? "md:order-2" : ""}`}>
               <Link href={`/film/${film.slug}`}>
                 <Poster title={film.title} subtitle={film.subtitle} palette={film.palette} badge={film.badge} className="shadow-2xl ring-1 ring-white/10 transition hover:-rotate-1 hover:scale-[1.02]" />

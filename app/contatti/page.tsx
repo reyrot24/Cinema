@@ -13,7 +13,7 @@ export default function ContattiPage() {
       <PageHero eyebrow="Contatti · Dove siamo" title={<>Vieni a <em className="text-gold">trovarci.</em></>}>
         Cerca la strada più facile per raggiungerci, oppure scrivici per informazioni su programmazione, scuole ed eventi.
       </PageHero>
-      <section className="mx-auto grid max-w-7xl gap-6 px-4 sm:px-6 lg:grid-cols-[1fr_1.4fr]">
+      <section className="mx-auto grid grid-cols-1 max-w-7xl gap-6 px-4 sm:px-6 lg:grid-cols-[1fr_1.4fr]">
         <Reveal className="space-y-3">
           {[
             { icon: MapPin, label: "Indirizzo", value: `${cinema.address}, ${cinema.city} (${cinema.province})`, href: `https://www.google.com/maps/search/?api=1&query=${q}` },
